@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript and the DOM | My Learning Blog</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>JavaScript & The DOM: Understanding the Web's Engine</h1>
+    <p><a href="index.html">&larr; Back to Home</a></p>
+  </header>
+
+  <main>
+    <article>
+      <!-- Section 1 -->
+      <section>
+        <h2>1. HTML, CSS, and JavaScript: House Analogy</h2>
+        <p>Think of building a website like building a house:</p>
+        <ul>
+          <li><strong>HTML (The Structure):</strong> The wooden frame, walls, and foundation. It defines what is on the page (text, buttons, images).</li>
+          <li><strong>CSS (The Style):</strong> The paint, wallpaper, light fixtures, and furniture. It controls how the structure looks.</li>
+          <li><strong>JavaScript (The Functionality):</strong> The wiring, plumbing, and smart home automation. It makes things move, respond, and interact when someone presses a switch or turns a door handle.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section>
+        <h2>2. Control Flow and Loops</h2>
+        <p><strong>Control flow</strong> is simply the order in which code runs—step-by-step from top to bottom, making decisions along the way. A <strong>loop</strong> is repeating an action until a specific condition is met.</p>
+        <p><em>Everyday example: Brushing your teeth</em></p>
+        <p>You don't brush one tooth once and stop. You start brushing, ask yourself <em>"Have I brushed for 2 minutes?"</em>, and if the answer is no, you keep brushing. Once 2 minutes pass, you stop and rinse.</p>
+        <pre><code>// A loop in JavaScript:
+for (let minute = 1; minute <= 2; minute++) {
+  console.log('Brushing teeth... Minute ' + minute);
+}
+console.log('Done! Rinse mouth.');</code></pre>
+      </section>
+
+      <!-- Section 3 -->
+      <section>
+        <h2>3. The DOM (Document Object Model)</h2>
+        <p>The <strong>DOM</strong> is the bridge between HTML and JavaScript. When a browser loads HTML, it converts all the tags into a live tree-like structure that JavaScript can see, change, add to, or delete on the fly.</p>
+        <p>For example, if you click a "Dark Mode" button, JavaScript reaches into the DOM and changes the background color instantly:</p>
+        <pre><code>// Interacting with the DOM:
+let heading = document.getElementById('main-heading');
+heading.textContent = 'Welcome to my Interactive Site!';</code></pre>
+      </section>
+
+      <!-- Section 4 -->
+      <section>
+        <h2>4. Arrays vs. Objects</h2>
+        <p>Both store collections of data, but they organize it differently:</p>
+        <ul>
+          <li><strong>Array:</strong> An ordered list accessed by index number (starting at 0). Best for lists of similar items.</li>
+          <li><strong>Object:</strong> A collection of key-value pairs accessed by property names. Best for describing a specific item with details.</li>
+        </ul>
+        <pre><code>// Accessing data in an Array (by index position):
+let coffeeList = ['Espresso', 'Latte', 'Cappuccino'];
+console.log(coffeeList[1]); // Output: 'Latte'
+
+// Accessing data in an Object (by key name):
+let coffeeOrder = {
+  name: 'Jasdeep',
+  drink: 'Latte',
+  price: 4.50
+};
+console.log(coffeeOrder.drink); // Output: 'Latte'</code></pre>
+      </section>
+
+      <!-- Section 5 -->
+      <section>
+        <h2>5. Functions</h2>
+        <p>A <strong>function</strong> is a reusable block of instructions designed to perform a specific task. Instead of writing the same 5 lines of code over and over every time a user orders a coffee, you write a function once and call it whenever needed.</p>
+        <pre><code>// Defining a function:
+function makeCoffee(customer, drink) {
+  return customer + ' ordered a ' + drink + '!';
+}
+
+// Reusing the function:
+console.log(makeCoffee('Alex', 'Espresso'));
+console.log(makeCoffee('Sam', 'Cappuccino'));</code></pre>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p><a href="index.html">&larr; Back to Home</a></p>
+  </footer>
+</body>
+</html>
